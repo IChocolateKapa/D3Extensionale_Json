@@ -242,20 +242,20 @@ function draw_Render(orgqunid){
     var defs = container.append("defs");
 
     var arrowMarker = defs.append("marker")
-        .attr("id","arrow")
-        .attr("markerUnits","strokeWidth")
-        .attr("markerWidth","12")
-        .attr("markerHeight","12")
-        .attr("viewBox","0 0 12 12")
-        .attr("refX","6")
-        .attr("refY","6")
-        .attr("orient","auto");
+                            .attr("id","arrow")
+                            .attr("markerUnits","strokeWidth")
+                            .attr("markerWidth","20")
+                            .attr("markerHeight","20")
+                            .attr("viewBox","0 0 12 12")
+                            .attr("refX","6")
+                            .attr("refY","6")
+                            .attr("orient","auto");
 
     var arrow_path = "M2,2 L10,6 L2,10 L6,6 L2,2";
 
     arrowMarker.append("path")
         .attr("d",arrow_path)
-        .attr("fill","red");
+        .attr("fill","grey");
 
 
 
@@ -333,8 +333,8 @@ function draw_Render(orgqunid){
         	//return "-" + getCXY(d) + "px";
         })
         .attr("cy", function(d){
-            return "-15px";
-        	//return "-" + getCXY(d) + "px";
+            //return "-15px";
+        	return "-" + getCXY(d) + "px";
         })
         .attr("r", function(d){
         	return getCR(d) + "px";
