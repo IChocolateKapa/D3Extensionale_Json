@@ -1,0 +1,84 @@
+/*
+    Created By Echo 2015/09/11
+*/
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.node {
+    cursor: pointer;
+    fill : url(#hs);
+}
+
+.node:hover {
+    /*stroke: #FF8C00;*/
+    stroke-width: 1.5px;
+    fill : url(#hs);
+}
+.node node--leaf {
+    fill: white;
+    opacity:1;
+}
+.node node--leaf:hover {
+    fill: #FF8C00;
+    opacity:1;
+}
+.node node--root {
+    fill: red;
+    opacity:1;
+}
+.node node--root:hover {
+    fill: pink;
+    opacity:1;
+}
+
+.label {
+    font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-anchor: middle;
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.label,
+.node--root,
+.node--leaf {
+    pointer-events: none;
+}
+
+.linetext {
+    font-family: '微软雅黑',
+font-size: .6em ;
+    /*font-family: SimSun;*/
+    fill:lightgrey;
+    fill-opacity:1;
+}
+.myload{
+    display:none;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 200px;
+    background: black;
+    opacity: 1;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: -25px;
+    margin-left: -100px;
+    z-index: 777;
+}
+.bgload{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.2);
+    z-index: 666;
+    padding:0;
+    margin:0;
+}
+
+.svgRect{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
