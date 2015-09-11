@@ -16,19 +16,19 @@ body{
     stroke-width: 1.5px;
     fill : url(#hs);
 }
-.node node--leaf {
+.node .node--leaf {
     fill: white;
     opacity:1;
 }
-.node node--leaf:hover {
+.node .node--leaf:hover {
     fill: #FF8C00;
     opacity:1;
 }
-.node node--root {
+.node .node--root {
     fill: red;
     opacity:1;
 }
-.node node--root:hover {
+.node .node--root:hover {
     fill: pink;
     opacity:1;
 }
@@ -46,28 +46,14 @@ body{
 }
 
 .linetext {
-    font-family: '微软雅黑',
-font-size: .6em ;
-    /*font-family: SimSun;*/
+    font-family: 'Microsoft Yahei';
+    font-size: .6em ;
     fill:lightgrey;
     fill-opacity:1;
 }
-.myload{
-    display:none;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    height: 50px;
-    width: 200px;
-    background: black;
-    opacity: 1;
-    border-radius: 10px;
-    text-align: center;
-    margin-top: -25px;
-    margin-left: -100px;
-    z-index: 777;
-}
+
 .bgload{
+    display: none;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -76,6 +62,24 @@ font-size: .6em ;
     padding:0;
     margin:0;
 }
+.myload{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    line-height: 50px;
+    width: 200px;
+    background: rgba(0,0,0,.7);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: -25px;
+    margin-left: -100px;
+    z-index: 777;
+    font-family: 'Microsoft Yahei';
+    letter-spacing: 3px;
+}
+
 
 .svgRect{
     position: absolute;

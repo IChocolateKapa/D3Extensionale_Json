@@ -26,7 +26,7 @@ function getMoreChildren(){
 }
 
 //点击节点，显示出rect,点击rect上的扩展时进行对选中节点的再次扩展，即查询此qq群的成员
-function expand(){
+function expand(e){
 
 	$(".bgload").show(500);
 	$(".myload").show(500);

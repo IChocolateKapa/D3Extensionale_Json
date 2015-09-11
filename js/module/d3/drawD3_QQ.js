@@ -1,4 +1,20 @@
 
+$(function(){
+    var orgqunid= "323647";
+    drawD3QQ(result, orgqunid);
+})
+
+
+
+
+
+
+
+
+
+
+
+
 function initLinks_Nodes(flag){
 
 	//初始化nodes
@@ -189,8 +205,8 @@ function draw_Render(orgqunid){
 //    var chargeNum = -60000;
     var gravity = 0.4;
 
-    var height = $(window).height();
-    var width = $(window).width();
+    var height = $(window).height()-20;
+    var width = $(window).width()-20;
 
 
     force =   d3.layout.force()           		//创建基于物理模拟的位置连接
