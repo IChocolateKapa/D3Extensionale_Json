@@ -239,6 +239,24 @@ function draw_Render(orgqunid){
 	container = svg.append("g")
 				   .style("pointer-events", "all");
 
+    var defs = container.append("defs");
+
+    var arrowMarker = defs.append("marker")
+        .attr("id","arrow")
+        .attr("markerUnits","strokeWidth")
+        .attr("markerWidth","12")
+        .attr("markerHeight","12")
+        .attr("viewBox","0 0 12 12")
+        .attr("refX","6")
+        .attr("refY","6")
+        .attr("orient","auto");
+
+    var arrow_path = "M2,2 L10,6 L2,10 L6,6 L2,2";
+
+    arrowMarker.append("path")
+        .attr("d",arrow_path)
+        .attr("fill","red");
+
 
 
 	link = container.append("g")
@@ -247,14 +265,14 @@ function draw_Render(orgqunid){
 					.data(force.links())
 					.enter()
 					.append("line")
-					.attr("class", "link");
+					.attr("class", "link")
+                    .attr("marker-end","url(#arrow)");
 
 
 
 
 	link.style("stroke",function(d, i){//  设置线的颜色
 			return "lightgrey";
-			//return colors(i);
 		})
 		.style("stroke-width",function(d,i){//设置线的宽度
 			d.weight*10;
@@ -311,10 +329,12 @@ function draw_Render(orgqunid){
 
 	node.append("circle")
         .attr("cx", function(d){
-        	return "-" + getCXY(d) + "px";
+            return "30px";
+        	//return "-" + getCXY(d) + "px";
         })
         .attr("cy", function(d){
-        	return "-" + getCXY(d) + "px";
+            return "-15px";
+        	//return "-" + getCXY(d) + "px";
         })
         .attr("r", function(d){
         	return getCR(d) + "px";

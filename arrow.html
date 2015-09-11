@@ -31,7 +31,7 @@ var arrow_path = "M2,2 L10,6 L2,10 L6,6 L2,2";
 						
 arrowMarker.append("path")
 			.attr("d",arrow_path)
-			.attr("fill","#000");
+			.attr("fill","red");
 
 var line = svg.append("line")
 			 .attr("x1",0)
@@ -42,7 +42,8 @@ var line = svg.append("line")
 			 .attr("stroke-width",2)
 			 .attr("marker-end","url(#arrow)");
 
-var curve_path = "M20,70 T80,100 T160,80 T200,90";
+
+/*var curve_path = "M20,70 T80,100 T160,80 T200,90";
 
 var curve = svg.append("path")
 			 .attr("d",curve_path)
@@ -52,7 +53,7 @@ var curve = svg.append("path")
 			 .attr("marker-start","url(#arrow)")
 			 .attr("marker-mid","url(#arrow)")
 			 .attr("marker-end","url(#arrow)");
-			 
+			 */
 
 </script>  
 </body>  
