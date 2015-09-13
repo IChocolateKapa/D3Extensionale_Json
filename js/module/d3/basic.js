@@ -41,6 +41,7 @@ function expand(e){
 	}else if(thisNode.qq_qunNumber){
 		showChildNodes();
 	} else {
+		$("#d3part").empty();
         setTimeout(function(){
             $(".bgload").hide();
             $(".myload").hide();

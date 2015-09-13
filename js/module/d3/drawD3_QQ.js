@@ -5,16 +5,6 @@ $(function(){
 })
 
 
-
-
-
-
-
-
-
-
-
-
 function initLinks_Nodes(flag){
 
 	//初始化nodes
@@ -266,7 +256,9 @@ function draw_Render(orgqunid){
 					.enter()
 					.append("line")
 					.attr("class", "link")
-                    .attr("marker-end","url(#arrow)");
+                    .attr("marker-end","url(#arrow)")
+                    //.attr("marker-mid","url(#arrow)")
+                    .attr("marker-start","url(#arrow)");
 
 
 
@@ -329,8 +321,8 @@ function draw_Render(orgqunid){
 
 	node.append("circle")
         .attr("cx", function(d){
-            return "30px";
-        	//return "-" + getCXY(d) + "px";
+            //return "30px";
+        	return  getCXY(d) + "px";
         })
         .attr("cy", function(d){
             //return "-15px";
