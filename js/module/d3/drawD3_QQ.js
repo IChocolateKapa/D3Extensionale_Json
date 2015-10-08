@@ -322,7 +322,7 @@ function draw_Render(orgqunid){
 	node.append("circle")
         .attr("cx", function(d){
             //return "30px";
-        	return  getCXY(d) + "px";
+        	return  "-" + getCXY(d) + "px";
         })
         .attr("cy", function(d){
             //return "-15px";
